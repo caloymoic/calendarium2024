@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Download Calendarium 2024</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .btn-download {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn-download:hover {
+            background-color: #45a049;
+        }
+        .btn-download:active {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Sync Your Calendar</h2>
+        <p>Click the button below to download and sync the ICS file to your calendar.</p>
+        <button class="btn-download" onclick="downloadICS()">Sync now</button>
+    </div>
+
+    <script>
+        function downloadICS() {
+            // URL of the uploaded ICS file
+            var icsFileUrl = 'https://drive.google.com/uc?export=download&id=1yMYYKmgQguVmPpHZB85FNVfi6WsMredO';
+            
+            // Create a hidden anchor element
+            var a = document.createElement('a');
+            a.href = icsFileUrl;
+            a.download = 'caloymoic@gmail.com.ics'; // Default file name for the downloaded file
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+    </script>
+</body>
+</html>
